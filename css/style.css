@@ -307,6 +307,50 @@ header nav img {
     border: 1px solid rgba(255,255,255,0.18);
 }
 
+/* Media Queries pour les bannières responsives */
+@media screen and (max-width: 768px) {
+    .full-width-banner {
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .animated-green-banner {
+        padding: 1rem 0;
+    }
+    
+    .animated-green-banner h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .animated-green-banner p {
+        font-size: 0.9rem;
+    }
+    
+    .particle {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .animated-green-banner {
+        padding: 0.8rem 0;
+    }
+    
+    .animated-green-banner h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .animated-green-banner p {
+        font-size: 0.8rem;
+    }
+}
+
 /* Hover effects for cards and buttons */
 .card-hover {
     transition: transform 0.25s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.25s;
