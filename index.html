@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plastoblast - Accueil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'plastoblast-green': '#00693E',
+                        'plastoblast-red': '#D90429',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <div id="scroll-progress"></div>
+    <div id="loader"><div class="loader-spinner"></div></div>
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Desktop Menu (à gauche) -->
+            <div class="hidden md:flex space-x-2 sm:space-x-4 text-sm sm:text-base">
+                <a href="index.html" class="text-plastoblast-green hover:text-plastoblast-red font-semibold">Accueil</a>
+                <a href="products.html" class="text-gray-700 hover:text-plastoblast-red">Produits</a>
+                <a href="about.html" class="text-gray-700 hover:text-plastoblast-red">À Propos</a>
+                <a href="contact.html" class="text-gray-700 hover:text-plastoblast-red">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (à gauche) -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="p-2 bg-white rounded-md text-plastoblast-green hover:text-plastoblast-red focus:outline-none">
+                    <svg class="h-8 w-8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Logo (à droite) -->
+            <div>
+                <a href="index.html" class="text-2xl font-bold text-plastoblast-green hover:text-plastoblast-red flex items-center">
+                    <img src="assets/img/Logo.png" alt="Logo Plastoblast" class="h-10 sm:h-12 mr-2">
+                    <span class="hidden sm:inline">Plastoblast</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu (initially hidden) -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg border-t border-gray-200">
+        <a href="index.html" class="block px-6 py-3 text-plastoblast-green hover:bg-gray-100 hover:text-plastoblast-red font-semibold">Accueil</a>
+        <a href="products.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-plastoblast-red">Produits</a>
+        <a href="about.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-plastoblast-red">À Propos</a>
+        <a href="contact.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-plastoblast-red">Contact</a>
+    </div>
+
+<!-- Section bannière animée verte en pleine largeur -->
+<div class="full-width-banner">
+  <div class="animated-green-banner">
+    <h2 class="text-center uppercase tracking-widest">CCTV Accessoires</h2>
+    <p class="text-center">Solutions innovantes pour caméras de sécurité, conçues pour répondre à tous vos besoins d'installation et de protection.</p>
+  </div>
+</div>
+
+    <!-- Main Content -->
+    <main>
+
+        <section class="py-12 sm:py-16 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12 text-plastoblast-green">Nos Engagements</h2>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <h3 class="text-xl font-semibold mb-3 text-plastoblast-red">Qualité Supérieure</h3>
+                        <p>Produits robustes et durables, conçus pour résister aux conditions les plus exigeantes.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <h3 class="text-xl font-semibold mb-3 text-plastoblast-red">Innovation Continue</h3>
+                        <p>Solutions innovantes répondant aux besoins spécifiques du marché de la sécurité.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <h3 class="text-xl font-semibold mb-3 text-plastoblast-red">Fabrication Locale</h3>
+                        <p>Fiers de contribuer à l'économie locale avec une production algérienne de qualité.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+         <section class="py-12 sm:py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12 text-plastoblast-green">Nos Catégories de Produits</h2>
+                <div class="grid md:grid-cols-2 gap-10">
+                     <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="assets/img/products/AJ120.png" alt="Boîtes de Jonction" class="w-full h-48 object-contain mb-4 rounded">
+                        <h3 class="text-2xl font-bold mb-4 text-plastoblast-green">Boîtes de Jonction</h3>
+                        <p class="mb-4">Solutions robustes et étanches pour protéger les connexions de vos caméras de surveillance.</p>
+                        <a href="products.html#junction-boxes" class="text-plastoblast-red hover:underline font-semibold">Voir les boîtes de jonction &rarr;</a>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="assets/img/products/WS15D.png" alt="Supports Muraux" class="w-full h-48 object-contain mb-4 rounded">
+                        <h3 class="text-2xl font-bold mb-4 text-plastoblast-green">Supports Muraux (Wall Support)</h3>
+                        <p class="mb-4">Supports muraux résistants et polyvalents pour une installation optimale de vos caméras.</p>
+                        <a href="products.html#wall-supports" class="text-plastoblast-red hover:underline font-semibold">Voir les supports muraux &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Plastoblast. Tous droits réservés.</p>
+            <p class="text-sm">Conception et fabrication d'accessoires pour caméras de sécurité.</p>
+            <p class="text-sm mt-2">Ouled Brahim, Hamadi, Algérie | <a href="mailto:Djemoumahd.salim@gmail.com" class="hover:underline">Djemoumahd.salim@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/animated-banner.js"></script>
+</body>
+</html>

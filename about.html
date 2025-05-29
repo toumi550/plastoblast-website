@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - Plastoblast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'plastoblast-green': '#00693E',
+                        'plastoblast-red': '#D90429',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <div id="scroll-progress"></div>
+    <div id="loader"><div class="loader-spinner"></div></div>
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Desktop Menu (à gauche) -->
+            <div class="hidden md:flex space-x-2 sm:space-x-4 text-sm sm:text-base">
+                <a href="index.html" class="text-gray-700 hover:text-plastoblast-red">Accueil</a>
+                <a href="products.html" class="text-gray-700 hover:text-plastoblast-red">Produits</a>
+                <a href="about.html" class="text-plastoblast-green hover:text-plastoblast-red font-semibold">À Propos</a>
+                <a href="contact.html" class="text-gray-700 hover:text-plastoblast-red">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (à gauche) -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="p-2 bg-white rounded-md text-plastoblast-green hover:text-plastoblast-red focus:outline-none">
+                    <svg class="h-8 w-8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Logo (à droite) -->
+            <div>
+                <a href="index.html" class="text-2xl font-bold text-plastoblast-green hover:text-plastoblast-red flex items-center">
+                    <img src="assets/img/Logo.png" alt="Logo Plastoblast" class="h-10 sm:h-12 mr-2">
+                    <span class="hidden sm:inline">Plastoblast</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu (initially hidden) -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg border-t border-gray-200">
+        <a href="index.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-plastoblast-red">Accueil</a>
+        <a href="products.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-plastoblast-red">Produits</a>
+        <a href="about.html" class="block px-6 py-3 text-plastoblast-green hover:bg-gray-100 hover:text-plastoblast-red font-semibold">À Propos</a>
+        <a href="contact.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-plastoblast-red">Contact</a>
+    </div>
+
+<!-- Section bannière animée verte en pleine largeur -->
+<div class="full-width-banner">
+  <div class="animated-green-banner">
+    <h2 class="text-center uppercase tracking-widest">À Propos de Plastoblast</h2>
+    <p class="text-center">Découvrez notre histoire, notre mission et notre engagement envers la qualité et l'innovation.</p>
+  </div>
+</div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <div class="bg-white p-8 sm:p-10 rounded-lg shadow-xl glass-card scroll-initially-hidden" data-animation="animate-zoomIn">
+            <h1 class="text-3xl sm:text-4xl font-bold mb-8 text-center text-plastoblast-green">À Propos de Plastoblast</h1>
+            
+            <section class="mb-10">
+                <h2 class="text-2xl font-semibold mb-4 text-plastoblast-red">Notre Mission</h2>
+                <p class="text-lg leading-relaxed">Chez Plastoblast, notre mission est de concevoir et produire des accessoires de haute qualité pour caméras de sécurité. Nous nous engageons à fournir des solutions qui répondent aux besoins de fiabilité, de durabilité et d'innovation de nos clients. Chaque produit est le fruit d'une recherche approfondie et d'un souci constant de performance, afin d'assurer la meilleure protection et la plus grande facilité d'installation pour les systèmes de vidéosurveillance.</p>
+            </section>
+
+            <section class="mb-10">
+                <h2 class="text-2xl font-semibold mb-4 text-plastoblast-red">Nos Valeurs</h2>
+                <div class="space-y-4">
+                    <div class="p-4 border-l-4 border-plastoblast-green bg-green-50 rounded-r-lg">
+                        <h3 class="font-semibold text-lg">Qualité et Fiabilité</h3>
+                        <p class="leading-relaxed">Utilisation de matériaux de premier choix (comme le plastique PP et ABS technique) pour garantir la robustesse et la longévité de nos produits, même dans des conditions environnementales difficiles (résistance UV, chocs, étanchéité IP65).</p>
+                    </div>
+                    <div class="p-4 border-l-4 border-plastoblast-green bg-green-50 rounded-r-lg">
+                        <h3 class="font-semibold text-lg">Innovation</h3>
+                        <p class="leading-relaxed">Recherche constante de solutions intelligentes et pratiques pour faciliter l'installation et améliorer l'efficacité des systèmes de sécurité.</p>
+                    </div>
+                    <div class="p-4 border-l-4 border-plastoblast-green bg-green-50 rounded-r-lg">
+                        <h3 class="font-semibold text-lg">Production Locale</h3>
+                        <p class="leading-relaxed">Fierté de notre fabrication algérienne, contribuant au développement local et assurant une réactivité et un service client de proximité.</p>
+                    </div>
+                    <div class="p-4 border-l-4 border-plastoblast-green bg-green-50 rounded-r-lg">
+                        <h3 class="font-semibold text-lg">Esthétique et Discrétion</h3>
+                        <p class="leading-relaxed">Conception soignée pour une intégration harmonieuse des accessoires dans tous types d'environnements, professionnels ou résidentiels.</p>
+                    </div>
+                    <div class="p-4 border-l-4 border-plastoblast-green bg-green-50 rounded-r-lg">
+                        <h3 class="font-semibold text-lg">Satisfaction Client</h3>
+                        <p class="leading-relaxed">Écoute attentive des besoins de nos clients (installateurs, distributeurs, utilisateurs finaux) pour offrir des produits et services adaptés.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-semibold mb-4 text-plastoblast-red">Notre Engagement envers la Qualité</h2>
+                <p class="text-lg leading-relaxed">Plastoblast s'engage à maintenir les plus hauts standards de qualité à chaque étape de la production, de la sélection des matières premières au contrôle final des produits. Nous visons l'excellence pour devenir le partenaire de confiance de tous les professionnels de la sécurité en Algérie et au-delà.</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Plastoblast. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/animated-banner.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Produits - Plastoblast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'plastoblast-green': '#00693E',
+                        'plastoblast-red': '#D90429',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <div id="scroll-progress"></div>
+    <div id="loader"><div class="loader-spinner"></div></div>
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Desktop Menu (à gauche) -->
+            <div class="hidden md:flex space-x-2 sm:space-x-4 text-sm sm:text-base">
+                <a href="index.html" class="text-gray-700 hover:text-plastoblast-red">Accueil</a>
+                <a href="products.html" class="text-plastoblast-green hover:text-plastoblast-red font-semibold">Produits</a>
+                <a href="about.html" class="text-gray-700 hover:text-plastoblast-red">À Propos</a>
+                <a href="contact.html" class="text-gray-700 hover:text-plastoblast-red">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (à gauche) -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="p-2 bg-white rounded-md text-plastoblast-green hover:text-plastoblast-red focus:outline-none">
+                    <svg class="h-8 w-8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Logo (à droite) -->
+            <div>
+                <a href="index.html" class="text-2xl font-bold text-plastoblast-green hover:text-plastoblast-red flex items-center">
+                    <img src="assets/img/Logo.png" alt="Logo Plastoblast" class="h-10 sm:h-12 mr-2">
+                    <span class="hidden sm:inline">Plastoblast</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu (initially hidden) -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg border-t border-gray-200">
+        <a href="index.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-plastoblast-red">Accueil</a>
+        <a href="products.html" class="block px-6 py-3 text-plastoblast-green hover:bg-gray-100 hover:text-plastoblast-red font-semibold">Produits</a>
+        <a href="about.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-plastoblast-red">À Propos</a>
+        <a href="contact.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-plastoblast-red">Contact</a>
+    </div>
+
+<!-- Section bannière animée verte en pleine largeur -->
+<div class="full-width-banner">
+  <div class="animated-green-banner">
+    <h2 class="text-center uppercase tracking-widest">Nos Produits</h2>
+    <p class="text-center">Découvrez notre gamme complète d'accessoires pour caméras de sécurité, conçus pour répondre à tous vos besoins d'installation et de protection.</p>
+  </div>
+</div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <h1 class="text-4xl font-bold text-center mb-12 text-plastoblast-green">Catalogue Produits</h1>
+        
+        <!-- Product Categories Links -->
+        <section id="product-categories-links" class="mb-12">
+            <div class="flex justify-center space-x-6">
+                <a href="#junction-boxes" class="bg-plastoblast-green text-white py-3 px-6 rounded-lg hover:bg-green-700 transition-colors">Boîtes de Jonction</a>
+                <a href="#wall-supports" class="bg-plastoblast-green text-white py-3 px-6 rounded-lg hover:bg-green-700 transition-colors">Supports Muraux</a>
+            </div>
+        </section>
+
+        <!-- Junction Boxes Section -->
+        <section id="junction-boxes" class="py-12 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-center mb-10 text-plastoblast-red">Boîtes de Jonction</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- AJ120 Card -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="assets/img/products/AJ120.png" alt="CBOX-AJ120" class="w-full h-56 object-contain p-4 bg-gray-200">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-plastoblast-green">CBOX-AJ120</h3>
+                        <p class="text-gray-600 text-sm mb-3 h-16 overflow-hidden">Boîte de jonction compacte et résistante pour caméras dôme/bullet. Diam. fixation 25-90mm.</p>
+                        <p class="text-lg font-semibold text-plastoblast-red mb-3">125.00 DA</p>
+                        <a href="product-cbox-aj120.html" class="block text-center bg-plastoblast-green text-white py-2 px-4 rounded hover:bg-green-700 transition-colors">Voir détails</a>
+                    </div>
+                </div>
+                <!-- AJ140 Card -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="assets/img/products/AJ140.png" alt="CBOX-AJ140" class="w-full h-56 object-contain p-4 bg-gray-200">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-plastoblast-green">CBOX-AJ140</h3>
+                        <p class="text-gray-600 text-sm mb-3 h-16 overflow-hidden">Boîte de jonction étanche pour caméras dôme/IP. Diam. fixation 30-110mm.</p>
+                        <p class="text-lg font-semibold text-plastoblast-red mb-3">150.00 DA</p>
+                        <a href="#" class="block text-center bg-plastoblast-green text-white py-2 px-4 rounded hover:bg-green-700 transition-colors">Voir détails (bientôt)</a>
+                    </div>
+                </div>
+                <!-- SJ110 Card -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="assets/img/products/SJ110.png" alt="CBOX-SJ110" class="w-full h-56 object-contain p-4 bg-gray-200">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-plastoblast-green">CBOX-SJ110</h3>
+                        <p class="text-gray-600 text-sm mb-3 h-16 overflow-hidden">Boîte de jonction universelle et discrète. Diam. fixation 28-90mm.</p>
+                        <p class="text-lg font-semibold text-plastoblast-red mb-3">110.00 DA</p>
+                        <a href="#" class="block text-center bg-plastoblast-green text-white py-2 px-4 rounded hover:bg-green-700 transition-colors">Voir détails (bientôt)</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wall Supports Section -->
+        <section id="wall-supports" class="py-16 scroll-mt-20" data-animation="animate-fadeInUp" data-delay="1s">
+            <h2 class="text-3xl font-bold text-center mb-10 text-plastoblast-red">Supports Muraux (Wall Support)</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- WS15 D Card -->
+                <div class="scroll-initially-hidden card-hover glass-card" data-animation="animate-fadeInUp" data-delay="1.1s">
+                    <img src="assets/img/products/WS15D.png" alt="WS15 D" class="w-full h-56 object-contain p-4 bg-gray-200">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-plastoblast-green">WS15 D</h3>
+                        <p class="text-gray-600 text-sm mb-3">Support mural compact, tube 2mm.</p>
+                        <p class="text-lg font-semibold text-plastoblast-red mb-3">300.00 DA</p>
+                        <a href="#" class="block text-center bg-plastoblast-green text-white py-2 px-4 rounded hover:bg-green-700 transition-colors">Voir détails (bientôt)</a>
+                    </div>
+                </div>
+                 <!-- WS15 E Card -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="assets/img/products/WS15E.png" alt="WS15 E" class="w-full h-56 object-contain p-4 bg-gray-200">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-plastoblast-green">WS15 E</h3>
+                        <p class="text-gray-600 text-sm mb-3">Support mural, tube 2mm.</p>
+                        <p class="text-lg font-semibold text-plastoblast-red mb-3">400.00 DA</p>
+                        <a href="#" class="block text-center bg-plastoblast-green text-white py-2 px-4 rounded hover:bg-green-700 transition-colors">Voir détails (bientôt)</a>
+                    </div>
+                </div>
+                <!-- WS30 D Card -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="assets/img/products/WS30D.png" alt="WS30 D" class="w-full h-56 object-contain p-4 bg-gray-200">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-plastoblast-green">WS30 D</h3>
+                        <p class="text-gray-600 text-sm mb-3">Support mural, tube 2mm.</p>
+                        <p class="text-lg font-semibold text-plastoblast-red mb-3">450.00 DA</p>
+                        <a href="#" class="block text-center bg-plastoblast-green text-white py-2 px-4 rounded hover:bg-green-700 transition-colors">Voir détails (bientôt)</a>
+                    </div>
+                </div>
+                <!-- Add more WS product placeholders here based on the list from memory -->
+                <!-- Example for WS80L -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="assets/img/products/WS80L.png" alt="WS80 L" class="w-full h-56 object-contain p-4 bg-gray-200">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-plastoblast-green">WS80 L</h3>
+                        <p class="text-gray-600 text-sm mb-3">Support mural long, tube 2mm.</p>
+                        <p class="text-lg font-semibold text-plastoblast-red mb-3">1100.00 DA</p>
+                        <a href="#" class="block text-center bg-plastoblast-green text-white py-2 px-4 rounded hover:bg-green-700 transition-colors">Voir détails (bientôt)</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Plastoblast. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/animated-banner.js"></script>
+</body>
+</html>

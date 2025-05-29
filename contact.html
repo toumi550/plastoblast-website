@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-Nous - Plastoblast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'plastoblast-green': '#00693E',
+                        'plastoblast-red': '#D90429',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <div id="scroll-progress"></div>
+    <div id="loader"><div class="loader-spinner"></div></div>
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Desktop Menu (à gauche) -->
+            <div class="hidden md:flex space-x-2 sm:space-x-4 text-sm sm:text-base">
+                <a href="index.html" class="text-gray-700 hover:text-plastoblast-red">Accueil</a>
+                <a href="products.html" class="text-gray-700 hover:text-plastoblast-red">Produits</a>
+                <a href="about.html" class="text-gray-700 hover:text-plastoblast-red">À Propos</a>
+                <a href="contact.html" class="text-plastoblast-green hover:text-plastoblast-red font-semibold">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (à gauche) -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="p-2 bg-white rounded-md text-plastoblast-green hover:text-plastoblast-red focus:outline-none">
+                    <svg class="h-8 w-8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Logo (à droite) -->
+            <div>
+                <a href="index.html" class="text-2xl font-bold text-plastoblast-green hover:text-plastoblast-red flex items-center">
+                    <img src="assets/img/Logo.png" alt="Logo Plastoblast" class="h-10 sm:h-12 mr-2">
+                    <span class="hidden sm:inline">Plastoblast</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu (initially hidden) -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg border-t border-gray-200">
+        <a href="index.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-plastoblast-red">Accueil</a>
+        <a href="products.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-plastoblast-red">Produits</a>
+        <a href="about.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-plastoblast-red">À Propos</a>
+        <a href="contact.html" class="block px-6 py-3 text-plastoblast-green hover:bg-gray-100 hover:text-plastoblast-red font-semibold">Contact</a>
+    </div>
+
+<!-- Section bannière animée verte en pleine largeur -->
+<div class="full-width-banner">
+  <div class="animated-green-banner">
+    <h2 class="text-center uppercase tracking-widest">Contactez-nous</h2>
+    <p class="text-center">Notre équipe est à votre disposition pour répondre à toutes vos questions et vous accompagner dans vos projets.</p>
+  </div>
+</div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <div class="bg-white p-8 sm:p-10 rounded-lg shadow-xl max-w-3xl mx-auto glass-card scroll-initially-hidden" data-animation="animate-fadeInLeft">
+            <h1 class="text-3xl sm:text-4xl font-bold mb-8 text-center text-plastoblast-green">Contactez-Nous</h1>
+            <p class="text-center text-lg mb-10">Pour toute question, demande de devis ou partenariat, n'hésitez pas à nous contacter. Notre équipe est à votre écoute.</p>
+
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Nom complet</label>
+                    <input type="text" name="name" id="name" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-plastoblast-green focus:border-plastoblast-green sm:text-sm">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Adresse e-mail</label>
+                    <input type="email" name="email" id="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-plastoblast-green focus:border-plastoblast-green sm:text-sm">
+                </div>
+                <div>
+                    <label for="subject" class="block text-sm font-medium text-gray-700">Sujet</label>
+                    <input type="text" name="subject" id="subject" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-plastoblast-green focus:border-plastoblast-green sm:text-sm">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                    <textarea name="message" id="message" rows="4" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-plastoblast-green focus:border-plastoblast-green sm:text-sm"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-plastoblast-green hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-plastoblast-green transition-colors duration-300">
+                        Envoyer le Message
+                    </button>
+                </div>
+            </form>
+
+            <div class="mt-12 pt-8 border-t border-gray-200 text-center">
+                <h2 class="text-2xl font-semibold mb-4 text-plastoblast-red">Nos Coordonnées</h2>
+                <p class="text-lg"><strong>Email :</strong> <a href="mailto:Djemoumahd.salim@gmail.com" class="text-plastoblast-green hover:underline">Djemoumahd.salim@gmail.com</a></p>
+                <p class="text-lg"><strong>Adresse :</strong> Ouled Brahim, Hamadi, Algérie</p>
+                <!-- Ajouter Numéro de téléphone si disponible -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Plastoblast. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/animated-banner.js"></script>
+</body>
+</html>

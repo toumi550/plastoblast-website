@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBOX-AJ120 - Boîte de Jonction - Plastoblast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'plastoblast-green': '#00693E',
+                        'plastoblast-red': '#D90429',
+                    },
+                    transitionTimingFunction: {
+                        'custom-ease': 'cubic-bezier(0.25, 0.1, 0.25, 1)',
+                    }
+                }
+            }
+        }
+    </script>
+  <!-- Import Orbitron font for stylish headline -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <div id="scroll-progress"></div>
+    <div id="loader"><div class="loader-spinner"></div></div>
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Desktop Menu (à gauche) -->
+            <div class="hidden md:flex space-x-2 sm:space-x-4 text-sm sm:text-base">
+                <a href="index.html" class="text-gray-700 hover:text-plastoblast-red">Accueil</a>
+                <a href="products.html" class="text-plastoblast-green hover:text-plastoblast-red font-semibold">Produits</a>
+                <a href="about.html" class="text-gray-700 hover:text-plastoblast-red">À Propos</a>
+                <a href="contact.html" class="text-gray-700 hover:text-plastoblast-red">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (à gauche) -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="p-2 bg-white rounded-md text-plastoblast-green hover:text-plastoblast-red focus:outline-none">
+                    <svg class="h-8 w-8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Logo (à droite) -->
+            <div>
+                <a href="index.html" class="text-2xl font-bold text-plastoblast-green hover:text-plastoblast-red flex items-center">
+                    <img src="assets/img/Logo.png" alt="Logo Plastoblast" class="h-10 sm:h-12 mr-2">
+                    <span class="hidden sm:inline">Plastoblast</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu (initially hidden) -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg border-t border-gray-200">
+        <a href="index.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-plastoblast-red">Accueil</a>
+        <a href="products.html" class="block px-6 py-3 text-plastoblast-green hover:bg-gray-100 hover:text-plastoblast-red font-semibold">Produits</a>
+        <a href="about.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-plastoblast-red">À Propos</a>
+        <a href="contact.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-plastoblast-red">Contact</a>
+    </div>
+
+<!-- Section bannière animée verte en pleine largeur -->
+<div class="full-width-banner">
+  <div class="animated-green-banner">
+    <h2 class="text-center uppercase tracking-widest">CBOX-AJ120</h2>
+    <p class="text-center">Boîte de jonction hautement résistante et étanche, avec un design ergonomique et compact.</p>
+  </div>
+</div>
+
+    <!-- Main Product Content -->
+    <main class="container mx-auto px-6 py-12">
+        <div class="bg-white p-6 sm:p-8 rounded-lg shadow-xl scroll-initially-hidden card-hover" data-animation="animate-fadeInUp">
+            <!-- Breadcrumbs -->
+            <nav class="text-sm mb-8" aria-label="Breadcrumb">
+                <ol class="list-none p-0 inline-flex space-x-2">
+                    <li class="flex items-center">
+                        <a href="products.html" class="text-gray-500 hover:text-plastoblast-green">Produits</a>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-gray-400 mx-2">/</span>
+                        <a href="products.html#junction-boxes" class="text-gray-500 hover:text-plastoblast-green">Boîtes de Jonction</a>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-gray-400 mx-2">/</span>
+                        <span class="text-gray-700">CBOX-AJ120</span>
+                    </li>
+                </ol>
+            </nav>
+
+            <div class="grid md:grid-cols-2 gap-8 sm:gap-12 items-start">
+                <!-- Product Image Gallery -->
+                <div class="scroll-initially-hidden" data-animation="animate-slideInLeft">
+                    <img src="assets/img/products/AJ120.png" alt="CBOX-AJ120 Boîte de Jonction" class="w-full h-auto max-h-[500px] object-contain rounded-lg shadow-md border border-gray-200 p-4 bg-gray-50 transition-transform duration-300 hover:scale-105 parallax-img animate-tiltIn">
+                    <!-- Thumbnail images can be added here if multiple views are available -->
+                </div>
+
+                <!-- Product Details -->
+                <div class="scroll-initially-hidden" data-animation="animate-slideInRight" data-delay="0.2s">
+                    <h1 class="text-3xl sm:text-4xl font-bold text-plastoblast-green mb-3">CBOX-AJ120</h1>
+                    <p class="text-sm text-gray-500 mb-4">Référence: CAMBOX-AJ120 MM</p>
+                    <p class="text-2xl font-semibold text-plastoblast-red mb-6">125.00 DA</p>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-6">Boîte de jonction hautement résistante et étanche, avec un design ergonomique et compact. Idéale pour des installations discrètes en intérieur comme en extérieur, elle assure une protection optimale des connexions de vos caméras dôme ou bullet.</p>
+
+                    <div class="mb-6">
+                        <h2 class="text-xl font-semibold text-plastoblast-green mb-3">Points Forts</h2>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li class="scroll-initially-hidden" data-animation="animate-slideInLeft" data-delay="0.1s">Compatibilité : Dôme/IP/PoE jusqu'à 110mm diamètre</li>
+                            <li class="scroll-initially-hidden" data-animation="animate-slideInRight" data-delay="0.2s">Haute résistance : 150kg pression</li>
+                            <li class="scroll-initially-hidden" data-animation="animate-zoomIn" data-delay="0.3s">Matériaux : PP, anti-UV, anti-jaunissement</li>
+                            <li class="scroll-initially-hidden" data-animation="animate-swing" data-delay="0.4s">Installation facilitée</li>
+                            <li class="scroll-initially-hidden" data-animation="animate-blurIn" data-delay="0.5s">Protection : joint étanchéité intégré</li>
+                        </ul>
+                    </div>
+
+                    <button class="w-full bg-plastoblast-red hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition-all duration-300 ease-custom-ease transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 shimmer-effect">
+                        Ajouter au Devis (Bientôt disponible)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Technical Specifications -->
+            <section class="mt-12 pt-8 border-t border-gray-200 scroll-initially-hidden glass-card" data-animation="animate-flipInY" data-delay="0.3s">
+                <h2 class="text-2xl sm:text-3xl font-bold text-plastoblast-green mb-6 text-center">Spécifications Techniques</h2>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="grid md:grid-cols-2 gap-x-8 gap-y-4 text-gray-700">
+    <div><span class="font-semibold">Résistance :</span> <span class="compteur-animé animate-bounceIn" data-target="150">0</span> kg</div>
+    <div><span class="font-semibold">Poids :</span> <span class="compteur-animé animate-bounceIn" data-target="133">0</span> g</div>
+                        <div><strong>Dimensions (H x L x P):</strong> 40mm x 125mm x 45mm</div>
+                        <div><strong>Poids :</strong> 101g</div>
+                        <div><strong>Rayon de fixation :</strong> 25mm - 90mm</div>
+                        <div><strong>Matériau :</strong> Polypropylène (PP) anti-UV, anti-choc</div>
+                        <div><strong>Couleur :</strong> Blanc</div>
+                        <div><strong>Usage :</strong> Intérieur / Extérieur</div>
+                        <div><strong>Étanchéité :</strong> Oui (avec joint fourni)</div>
+                        <div><strong>Conditionnement :</strong> 150 pièces par carton</div>
+                        <div><strong>Emballage individuel :</strong> 1x Boîte, 1x Joint d'étanchéité, 3x Vis</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Related Products -->
+            <section class="mt-16 pt-8 border-t border-gray-200 scroll-initially-hidden" data-animation="animate-fadeInUp" data-delay="0.4s">
+                 <h2 class="text-2xl sm:text-3xl font-bold text-plastoblast-green mb-8 text-center">Produits Similaires</h2>
+                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- CBOX-AJ140 Card -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="assets/img/products/AJ140.png" alt="CBOX-AJ140" class="w-full h-56 object-contain p-4 bg-gray-200">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-plastoblast-green">CBOX-AJ140</h3>
+                            <p class="text-gray-600 text-sm mb-3 h-16 overflow-hidden">Boîte de jonction étanche pour caméras dôme/IP. Diam. fixation 30-110mm.</p>
+                            <p class="text-lg font-semibold text-plastoblast-red mb-3">150.00 DA</p>
+                            <a href="#" class="block text-center bg-plastoblast-green text-white py-2 px-4 rounded hover:bg-green-700 transition-colors">Voir détails (bientôt)</a>
+                        </div>
+                    </div>
+                    <!-- CBOX-SJ110 Card -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="assets/img/products/SJ110.PNG" alt="CBOX-SJ110" class="w-full h-56 object-contain p-4 bg-gray-200">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-plastoblast-green">CBOX-SJ110</h3>
+                            <p class="text-gray-600 text-sm mb-3 h-16 overflow-hidden">Boîte de jonction universelle et discrète. Diam. fixation 28-90mm.</p>
+                            <p class="text-lg font-semibold text-plastoblast-red mb-3">110.00 DA</p>
+                            <a href="#" class="block text-center bg-plastoblast-green text-white py-2 px-4 rounded hover:bg-green-700 transition-colors">Voir détails (bientôt)</a>
+                        </div>
+                    </div>
+                    <!-- Add more related products if any -->
+                 </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Plastoblast. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/animated-banner.js"></script>
+</body>
+</html>
